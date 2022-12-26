@@ -1,0 +1,15 @@
+#include <stdio.h>
+int
+main ()
+{
+  int size;
+  scanf ("%d", &size);
+  int arr[size];
+  for (int idx = 0; idx < size; idx++)
+    scanf ("%d", &arr[idx]);
+  for (int i = 0, j = size - 1; i < j; i++, j--)
+    arr[i] = (arr[i] + arr[j]) - (arr[j] = arr[i]);
+  for (int idx = 0; idx < size; idx++)
+    printf ("%d\t", arr[idx]);
+  return 0;
+}
